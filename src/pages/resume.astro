@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Professional Resume | Sriman Tirupathy Eshwarappa">
+	<section class="container mx-auto px-6 py-24 max-w-4xl print:py-0 print:px-0 print:mx-0 print:max-w-none">
+		<div class="flex justify-between items-end border-b border-white/10 pb-12 mb-12 print:border-slate-200 print:pb-6 print:mb-6">
+			<div>
+				<h1 class="text-5xl font-bold text-white mb-2 print:text-black">Sriman Tirupathy Eshwarappa</h1>
+				<p class="text-xl text-accent font-semibold print:text-blue-600">Principal Architect | Integration & AI Leadership</p>
+			</div>
+			<div class="text-right text-slate-400 text-sm print:text-slate-600">
+				<p>Bangalore, KA</p>
+				<p>shrimante@gmail.com</p>
+				<p>linkedin.com/in/srimaneshwar</p>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-4 gap-12 print:block">
+			<!-- Sidebar -->
+			<div class="md:col-span-1 border-r border-white/5 pr-8 print:hidden">
+				<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Core Competencies</h3>
+				<ul class="text-sm text-slate-300 space-y-2">
+					<li>MuleSoft Anypoint (Architect)</li>
+					<li>Microservices Architecture</li>
+					<li>Generative AI / LangChain</li>
+					<li>Cloud-Native (AWS/Azure)</li>
+					<li>Event-Driven (Solace/Kafka)</li>
+					<li>SDET & Quality Engineering</li>
+				</ul>
+
+				<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-12 mb-4">Certifications</h3>
+				<ul class="text-sm text-slate-300 space-y-2">
+					<li>Architect Certified (MuleSoft)</li>
+					<li>CKA (Kubernetes) - 2025</li>
+					<li>Docker Associate - 2025</li>
+				</ul>
+			</div>
+
+			<!-- Main Content -->
+			<div class="md:col-span-3 space-y-12 print:space-y-8">
+				<section>
+					<h2 class="text-xl font-bold text-white uppercase tracking-wider mb-6 print:text-black">Summary</h2>
+					<p class="text-slate-400 leading-relaxed print:text-slate-700">
+						Results-oriented Technology Leader with 18+ years of experience delivering high-stakes integration and architectural solutions. Proven track record in orchestrating national-scale ecosystems (Aadhaar/UIDAI) and enterprise hubs. Expert in bridging the gap between legacy stability and the frontier of Agentic AI.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-xl font-bold text-white uppercase tracking-wider mb-6 print:text-black">Professional Experience</h2>
+					
+					<div class="space-y-8 print:space-y-6">
+						<div>
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-lg font-bold text-white print:text-black">Principal Architect (MuleSoft)</h3>
+								<span class="text-sm text-slate-500">2025 – Present</span>
+							</div>
+							<p class="text-accent font-bold mb-3 print:text-blue-600">J2W | Client: RedSeaGlobal</p>
+							<ul class="list-disc list-outside ml-4 text-slate-400 text-sm space-y-2 print:text-slate-700">
+								<li>Defining HLD/LLD for centralized integration hub delivering **120+ production APIs**.</li>
+								<li>Architecting high-performance event-driven patterns using **Solace and CloudHub 2.0**.</li>
+								<li>Pioneering semantic observability and AI delivery workflows to reduce tech debt by 35%.</li>
+							</ul>
+						</div>
+
+						<div>
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-lg font-bold text-white print:text-black">Engineering Manager</h3>
+								<span class="text-sm text-slate-500">2017 – 2024</span>
+							</div>
+							<p class="text-accent font-bold mb-3 print:text-blue-600">Virtusa | Client: HealthFirst</p>
+							<ul class="list-disc list-outside ml-4 text-slate-400 text-sm space-y-2 print:text-slate-700">
+								<li>Modernized monolithic healthcare systems into scalable MuleSoft microservices.</li>
+								<li>Reduced release cycles by 40% through automated CI/CD and Quality Engineering.</li>
+								<li>Led and mentored 15+ engineers in architectural best practices.</li>
+							</ul>
+						</div>
+
+						<div>
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-lg font-bold text-white print:text-black">Integration Consultant</h3>
+								<span class="text-sm text-slate-500">2017</span>
+							</div>
+							<p class="text-accent font-bold mb-3 print:text-blue-600">Solistech | Client: AnnSummers (UK/Logistics)</p>
+							<ul class="list-disc list-outside ml-4 text-slate-400 text-sm space-y-2 print:text-slate-700">
+								<li>Built canonical integration hub for DHL, DPD, and RoyalMail shipping providers.</li>
+								<li>Implemented custom caching and decision logic (Drools) for international commerce.</li>
+							</ul>
+						</div>
+
+						<div>
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-lg font-bold text-white print:text-black">Technical Consultant</h3>
+								<span class="text-sm text-slate-500">2011 – 2013</span>
+							</div>
+							<p class="text-accent font-bold mb-3 print:text-blue-600">Daon India | Client: UIDAI (Aadhaar)</p>
+							<ul class="list-disc list-outside ml-4 text-slate-400 text-sm space-y-2 print:text-slate-700">
+								<li>Architected SSO and Access Management layers for India’s national identity project.</li>
+								<li>Developed critical diagnostic and load-testing suites for national-scale volume.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="print:break-inside-avoid">
+					<h2 class="text-xl font-bold text-white uppercase tracking-wider mb-6 print:text-black">Education</h2>
+					<div class="flex justify-between items-start">
+						<div>
+							<h3 class="font-bold text-white print:text-black">Bachelor of Engineering: Electronics & Telecomm</h3>
+							<p class="text-slate-400 print:text-slate-700">Visvesvaraya Technological University</p>
+						</div>
+						<span class="text-slate-500 text-sm">2006</span>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="mt-24 text-center print:hidden">
+			<button onclick="window.print()" class="px-12 py-5 bg-accent text-white font-bold rounded-xl hover:bg-accent/90 transition-all shadow-[0_0_30px_rgba(var(--accent-rgb),0.3)]">
+				Download Printable PDF
+			</button>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	@media print {
+		:global(body) {
+			background-color: white !important;
+		}
+		:global(nav, footer) {
+			display: none !important;
+		}
+	}
+</style>

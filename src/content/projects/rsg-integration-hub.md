@@ -1,6 +1,6 @@
 ---
-title: "RSG Core Integration Hub"
-description: "Enterprise-wide hybrid integration platform using MuleSoft CloudHub 2.0 and Solace, delivering 120+ APIs across BFSI and Healthcare."
+title: "Cognitive Quality Modernization"
+description: "Pioneering the 'Agentic QA' frontier by integrating LLMs and RAG into the core engineering lifecycle to slash delivery overhead by 25%."
 publishDate: 2024-12-01
 tags: ["MuleSoft", "Solace", "AWS", "API Governance"]
 featured: true
