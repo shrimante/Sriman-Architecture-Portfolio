@@ -10,12 +10,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		</p>
 		
 		<div class="space-y-6">
-			<a href="mailto:shrimante@gmail.com" class="block w-full btn-secondary !py-6 text-xl">
-				shrimante@gmail.com
+			<a href={`mailto:${siteConfig.email}`} class="block w-full btn-secondary !py-6 text-xl">
+				{siteConfig.email}
 			</a>
 			
-					</div>
-					<span class="text-accent italic font-semibold">View Profile →</span>
+			<div class="pt-6">
+				<a href={siteConfig.linkedIn} target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2">
+					<span class="text-slate-500 uppercase text-[10px] tracking-widest font-bold group-hover:text-slate-300 transition-colors">Professional Network</span>
+					<span class="text-accent italic font-semibold border-b border-accent/0 group-hover:border-accent/100 transition-all">View LinkedIn Profile →</span>
 				</a>
 			</div>
 		</div>
