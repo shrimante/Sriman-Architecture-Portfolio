@@ -8,6 +8,11 @@ export const siteConfig = {
   bookingLink: "https://calendly.com/sriman-te/15min", // Placeholder
   location: "Bangalore, India",
   timezone: "IST",
+  headshot: { 
+    enabled: true, 
+    src: "/images/headshot.png", 
+    alt: "Sriman Tirupathy Eshwarappa" 
+  },
   
   metrics: [
     { label: "Years Experience", value: "18+" },
