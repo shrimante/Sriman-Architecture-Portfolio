@@ -43,24 +43,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://sriman.a
 	</head>
 	<body class="min-h-screen flex flex-col bg-primary">
 		<!-- Sticky Header -->
-		<nav class="sticky top-0 z-50 bg-primary/80 backdrop-blur-xl border-b border-white/5 py-4">
+		<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200 py-4 shadow-sm">
 			<div class="container mx-auto px-6 flex justify-between items-center">
 				<a href="/" class="flex flex-col">
-					<span class="text-lg font-bold text-white tracking-tighter leading-none">SRIMAN.</span>
+					<span class="text-lg font-bold text-slate-900 tracking-tighter leading-none">SRIMAN.</span>
 					<span class="text-[10px] text-accent font-bold tracking-widest uppercase">Integrations</span>
 				</a>
 				
-				<div class="hidden lg:flex gap-8 items-center text-[11px] uppercase font-bold tracking-widest text-slate-400 mr-8">
-					<a href="/#impact" class="hover:text-white transition-colors">Impact</a>
-					<a href="/#case-studies" class="hover:text-white transition-colors">Case Studies</a>
-					<a href="/#leadership" class="hover:text-white transition-colors">Leadership</a>
+				<div class="hidden lg:flex gap-8 items-center text-[11px] uppercase font-bold tracking-widest text-slate-500 mr-8">
+					<a href="/#impact" class="hover:text-accent transition-colors">Impact</a>
+					<a href="/#case-studies" class="hover:text-accent transition-colors">Case Studies</a>
+					<a href="/#leadership" class="hover:text-accent transition-colors">Leadership</a>
 				</div>
 
 				<div class="flex gap-3">
-					<a href={siteConfig.resumePath} class="hidden sm:inline-flex px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white text-[10px] uppercase font-bold tracking-wider rounded-md transition-all" download>
+					<a href={siteConfig.resumePath} class="hidden sm:inline-flex px-4 py-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-[10px] uppercase font-bold tracking-wider rounded-md transition-all shadow-sm" download>
 						Download Resume
 					</a>
-					<a href={siteConfig.bookingLink} class="px-4 py-2 bg-accent hover:bg-accent-muted text-primary text-[10px] uppercase font-bold tracking-wider rounded-md transition-all">
+					<a href={siteConfig.bookingLink} class="px-4 py-2 bg-accent hover:bg-accent-muted text-white text-[10px] uppercase font-bold tracking-wider rounded-md transition-all shadow-sm">
 						Book Intro
 					</a>
 				</div>
@@ -73,32 +73,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://sriman.a
 
 		<!-- Floating Mobile CTA -->
 		<div class="fixed bottom-6 right-6 z-50 sm:hidden">
-			<a href={siteConfig.resumePath} class="flex items-center justify-center w-14 h-14 bg-accent text-primary rounded-full shadow-2xl active:scale-95 transition-transform" download aria-label="Download Resume">
+			<a href={siteConfig.resumePath} class="flex items-center justify-center w-14 h-14 bg-accent text-white rounded-full shadow-lg active:scale-95 transition-transform hover:bg-accent-muted" download aria-label="Download Resume">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
 			</a>
 		</div>
 
-		<footer class="bg-secondary/30 border-t border-white/5 pt-20 pb-10">
+		<footer class="bg-secondary border-t border-slate-200 pt-20 pb-10">
 			<div class="container mx-auto px-6">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
 					<div>
-						<h3 class="text-xl font-bold mb-6">Let's connect.</h3>
-						<p class="text-slate-400 mb-8 max-w-sm">Optimizing integration delivery and platform reliability for enterprise-scale ecosystems.</p>
+						<h3 class="text-xl font-bold mb-6 text-slate-900">Let's connect.</h3>
+						<p class="text-slate-600 mb-8 max-w-sm">Optimizing integration delivery and platform reliability for enterprise-scale ecosystems.</p>
 						<div class="flex gap-4">
-							<a href={`mailto:${siteConfig.email}`} class="text-slate-400 hover:text-accent transition-colors">Email</a>
-							<a href={siteConfig.linkedIn} class="text-slate-400 hover:text-accent transition-colors">LinkedIn</a>
+							<a href={`mailto:${siteConfig.email}`} class="text-slate-500 hover:text-accent transition-colors font-medium">Email</a>
+							<a href={siteConfig.linkedIn} class="text-slate-500 hover:text-accent transition-colors font-medium">LinkedIn</a>
 						</div>
 					</div>
 					<div>
-						<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Expertise Taxonomy</h4>
+						<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400 mb-6">Expertise Taxonomy</h4>
 						<div class="flex flex-wrap gap-x-6 gap-y-3">
 							{siteConfig.keywords.map(kw => (
-								<span class="text-xs text-slate-500 hover:text-slate-300 transition-colors cursor-default">{kw}</span>
+								<span class="text-xs text-slate-500 hover:text-slate-800 transition-colors cursor-default">{kw}</span>
 							))}
 						</div>
 					</div>
 				</div>
-				<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-slate-600 font-bold">
+				<div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-slate-400 font-bold">
 					<p>© {new Date().getFullYear()} {siteConfig.name}</p>
 					<p>Built for Performance & Conversion</p>
 				</div>

@@ -18,10 +18,10 @@ const icons: Record<string, any> = {
 };
 ---
 
-<div class="glass p-8 rounded-3xl group hover:border-accent/30 transition-all">
+<div class="glass p-8 rounded-3xl group hover:border-accent/40 hover:shadow-md transition-all">
   <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform duration-500">
     <Fragment set:html={icons[icon] || icons['layers']} />
   </div>
-  <h3 class="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">{title}</h3>
-  <p class="text-slate-400 leading-relaxed text-sm">{description}</p>
+  <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-accent transition-colors">{title}</h3>
+  <p class="text-slate-600 leading-relaxed text-sm">{description}</p>
 </div>
