@@ -18,7 +18,55 @@ const data = {
     "25% Operational efficiency gain via unified control plane",
     "Eliminated manual configuration errors through 100% Infrastructure-as-Code"
   ],
-  differently: "In retrospect, I would have invested earlier in automated performance profiling within the CI/CD pipeline. While we hit our reliability targets, optimizing resource allocation on OpenShift became a manual overhead during peak traffic periods which could have been mitigated through automated load testing and predictive scaling."
+  differently: "In retrospect, I would have invested earlier in automated performance profiling within the CI/CD pipeline. While we hit our reliability targets, optimizing resource allocation on OpenShift became a manual overhead during peak traffic periods which could have been mitigated through automated load testing and predictive scaling.",
+  diagram: `graph TD
+    Client[External Clients / Mobile / Web] --> F5[F5 Big-IP Load Balancer]
+    
+    subgraph ControlPlane[MuleSoft Anypoint Platform]
+        API_Manager[API Manager]
+        Runtime_Manager[Runtime Manager]
+    end
+
+    subgraph AWS[AWS Region - CloudHub 2.0]
+        CH2_Ingress[CloudHub 2.0 Ingress]
+        Exp_API[Experience APIs]
+        Sys_API_CH[External System APIs]
+        CH2_Ingress --> Exp_API
+        Exp_API --> Sys_API_CH
+    end
+
+    subgraph OnPrem[On-Premise Data Center]
+        OpenShift[Red Hat OpenShift Cluster]
+        subgraph RTF[Runtime Fabric]
+            RTF_Ingress[RTF Ingress Controller]
+            Process_API[Process / Orchestration APIs]
+            Sys_API_OP[Internal System APIs]
+            RTF_Ingress --> Process_API
+            Process_API --> Sys_API_OP
+        end
+        Backends[(Legacy DB / ERP / Mainframe)]
+        Sys_API_OP --> Backends
+    end
+
+    F5 -->|External Traffic| CH2_Ingress
+    F5 -->|Internal/Secure Traffic| RTF_Ingress
+    
+    Sys_API_CH -.->|VPN/Direct Connect| RTF_Ingress
+    
+    ControlPlane -.->|Management| Exp_API
+    ControlPlane -.->|Management| Process_API
+    ControlPlane -.->|Management| Sys_API_CH
+    ControlPlane -.->|Management| Sys_API_OP
+
+    classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:#fff;
+    classDef onprem fill:#005276,stroke:#00A1E0,stroke-width:2px,color:#fff;
+    classDef control fill:#00A1E0,stroke:#005276,stroke-width:2px,color:#fff;
+    classDef lb fill:#1C9E5E,stroke:#0F5B36,stroke-width:2px,color:#fff;
+    
+    class AWS aws;
+    class OnPrem onprem;
+    class ControlPlane control;
+    class F5 lb;`
 };
 ---
 
