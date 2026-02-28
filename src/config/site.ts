@@ -6,8 +6,8 @@ export const siteConfig = {
   linkedIn: "https://www.linkedin.com/in/srimante/", // Placeholder, user will replace
   resumePath: "/resume.pdf",
   bookingLink: "https://calendly.com/sriman-te/15min", // Placeholder
-  location: "Dallas, TX",
-  timezone: "CST",
+  location: "Bangalore, India",
+  timezone: "IST",
   
   metrics: [
     { label: "Years Experience", value: "18+" },
