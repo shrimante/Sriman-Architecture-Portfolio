@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Sriman Tirupathy Eshwarappa",
   title: "Associate Director – Integrations | MuleSoft Platform & API Ecosystems",
   tagline: "I build and run hybrid MuleSoft integration platforms with governance, reliability, and predictable delivery.",
-  email: "sriman.te@gmail.com", // Placeholder, user will replace
-  linkedIn: "https://www.linkedin.com/in/srimante/", // Placeholder, user will replace
+  email: "shrimante@gmail.com",
+  linkedIn: "https://www.linkedin.com/in/srimaneshwar/",
   resumePath: "/resume.pdf",
   bookingLink: "https://calendly.com/sriman-te/15min", // Placeholder
   location: "Bangalore, India",

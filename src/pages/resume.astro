@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
 ---
 
 <BaseLayout title="Professional Resume | Sriman Tirupathy Eshwarappa">
@@ -10,9 +11,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<p class="text-xl text-accent font-semibold print:text-blue-600">Principal Architect | Integration & AI Leadership</p>
 			</div>
 			<div class="text-right text-slate-400 text-sm print:text-slate-600">
-				<p>Bangalore, KA</p>
-				<p>shrimante@gmail.com</p>
-				<p>linkedin.com/in/srimaneshwar</p>
+				<p>{siteConfig.location}</p>
+				<p>{siteConfig.email}</p>
+				<p>{siteConfig.linkedIn.replace('https://', '').replace(/\/$/, '')}</p>
 			</div>
 		</div>
 
