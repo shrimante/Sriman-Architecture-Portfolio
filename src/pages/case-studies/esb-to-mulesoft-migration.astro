@@ -1,0 +1,25 @@
+---
+import CaseStudyTemplate from '../../components/CaseStudyTemplate.astro';
+
+const data = {
+  title: "Legacy ESB to MuleSoft Migration",
+  teaser: "Modernized a critical legacy integration layer from Informatica ESB to Anypoint Platform, reducing cycle times by 3 weeks and saving $250K annually.",
+  context: `The existing Informatica ESB infrastructure was reaching end-of-life and had become a bottleneck for business innovation. Cycle times were measured in months, and maintenance costs were skyrocketing.
+
+  The objective was to migrate the mission-critical integrations to MuleSoft while ensuring zero downtime for the existing production systems.`,
+  mandate: `Key responsibilities included:
+  - Mapping legacy Informatica patterns to modern Mule 4 architectures.
+  - Developing a migration factory model to accelerate payload transformations.
+  - Implementing event-driven patterns using Solace for real-time sync.
+  - Validating all migrations through automated test suites and DR drills.`,
+  results: [
+    "$250,000 Annual savings in licensing and compute",
+    "3 Weeks saved per release cycle",
+    "Reduced technical debt by 60%",
+    "Zero production downtime during migration"
+  ],
+  differently: "If I could do it again, I would have pushed for a 'big bang' migration on the low-complexity services rather than a purely phased approach. We spent a lot of time managing the 'dual-run' sync between Informatica and MuleSoft for simple integrations that could have been ported and switched in a single weekend with minimal risk."
+};
+---
+
+<CaseStudyTemplate {...data} />

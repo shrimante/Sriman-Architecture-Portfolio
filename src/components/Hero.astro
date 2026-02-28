@@ -1,0 +1,51 @@
+---
+import { siteConfig } from '../config/site';
+---
+
+<section class="relative overflow-hidden pt-32 pb-24 md:pt-48 md:pb-32">
+  <!-- Decorative background element -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-full -z-10 opacity-20 pointer-events-none">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-accent/20 via-transparent to-transparent blur-[120px]"></div>
+  </div>
+
+  <div class="container mx-auto px-6 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-2 mb-10 text-[10px] font-bold tracking-[0.2em] text-accent uppercase bg-accent/5 rounded-full border border-accent/10">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+      </span>
+      Open to New Roles & Opportunities
+    </div>
+
+    <h1 class="text-4xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
+      {siteConfig.title.split(' | ')[0]} <br />
+      <span class="text-gradient font-serif italic font-normal tracking-normal">{siteConfig.title.split(' | ')[1]}</span>
+    </h1>
+
+    <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed mb-12">
+      {siteConfig.tagline}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+      <a href={siteConfig.resumePath} class="btn-primary flex items-center gap-3 w-full sm:w-auto" download>
+        <span>Download Resume (PDF)</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </a>
+      <a href="#case-studies" class="btn-secondary w-full sm:w-auto">
+        View 3 Case Studies
+      </a>
+    </div>
+
+    <div class="mt-16 flex justify-center items-center gap-6 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        {siteConfig.location}
+      </div>
+      <div class="w-1 h-1 bg-slate-700 rounded-full"></div>
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        {siteConfig.timezone} Timezone
+      </div>
+    </div>
+  </div>
+</section>

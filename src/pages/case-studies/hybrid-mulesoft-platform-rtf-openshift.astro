@@ -1,0 +1,25 @@
+---
+import CaseStudyTemplate from '../../components/CaseStudyTemplate.astro';
+
+const data = {
+  title: "Hybrid MuleSoft Platform: RTF on OpenShift",
+  teaser: "Architected and delivered a secure, high-scale hybrid integration platform serving 5M+ members with OpenShift, F5, and GitLab CI/CD.",
+  context: `The existing infrastructure lacked the scalability and governance required for a growing ecosystem of 120+ microservices. Deployments were manual, and observability was fragmented, leading to unpredictable downtime and slow release cycles.
+
+  The goal was to build a modern, hybrid platform that combined the flexibility of on-prem (OpenShift) with the power of MuleSoft Runtime Fabric (RTF), ensuring 99.9% uptime and 40% faster deployment velocity.`,
+  mandate: `As the Platform Lead, I was responsible for:
+  - Designing the RTF on OpenShift architecture with F5 load balancing.
+  - Implementing GitLab CI/CD pipelines to automate the API lifecycle.
+  - Establishing multi-region DR playbooks and security governance (RBAC/TLS).
+  - Leading a team of 15+ engineers through the migration and rollout.`,
+  results: [
+    "99.9% Uptime serving 5M+ members",
+    "40% Increase in deployment speed",
+    "25% Improvement in release cycle efficiency",
+    "Fully automated CI/CD for 100+ APIs"
+  ],
+  differently: "In retrospect, I would have invested earlier in automated performance profiling within the CI/CD pipeline. While we hit our reliability targets, optimizing resource allocation on OpenShift became a manual overhead during peak traffic periods which could have been predicted through automated load testing."
+};
+---
+
+<CaseStudyTemplate {...data} />

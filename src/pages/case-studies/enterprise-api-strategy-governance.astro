@@ -1,0 +1,25 @@
+---
+import CaseStudyTemplate from '../../components/CaseStudyTemplate.astro';
+
+const data = {
+  title: "Enterprise API Strategy & Governance",
+  teaser: "Standardized the API lifecycle for a global enterprise, implementing robust security, automated quality gates, and high-fidelity observability.",
+  context: `Prior to this initiative, API development was siloed across multiple teams, with inconsistent security standards and zero central governance. This led to significant security risks, duplicated efforts, and a complete lack of discoverability for existing services.
+
+  The mission was to establish a unified API Operating Model that could support 120+ production APIs while maintaining strict security compliance and governance.`,
+  mandate: `My mandate involved:
+  - Defining global API Standards and Security Policies (OAuth2, TLS, RBAC).
+  - Implementing API Manager and Exchange as the central source of truth.
+  - Building an observability stack using Splunk, ELK, and Anypoint Monitoring.
+  - Creating a Delivery Operating Model aligned with ART/PI planning.`,
+  results: [
+    "120+ Production APIs standardized",
+    "ZERO security breaches since implementation",
+    "90% Reduction in service duplication",
+    "Enterprise-wide observability dashboard"
+  ],
+  differently: "I would have prioritized developer advocacy more heavily in the first phase. We focused strictly on the governance 'gates', which initially met some internal resistance. A more collaborative 'enablement' approach would have accelerated adoption and reduced the initial friction between the COE and the feature teams."
+};
+---
+
+<CaseStudyTemplate {...data} />
