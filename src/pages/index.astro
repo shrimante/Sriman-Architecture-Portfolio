@@ -5,28 +5,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Sriman | Principal Architect & AI Leader">
 	<!-- Hero Section -->
 	<section class="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
-		<div class="inline-block px-4 py-1.5 mb-8 text-xs font-semibold tracking-wider text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
+		<div class="inline-block px-4 py-1.5 mb-8 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
 			Principal Architect | MuleSoft & Microservices
 		</div>
 		<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8">
-			Architecting the <span class="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent italic">Agentic</span> Enterprise
+			Architecting the <span class="text-gradient italic">Agentic</span> Enterprise
 		</h1>
 		<p class="max-w-3xl text-lg md:text-xl text-slate-400 leading-relaxed mb-12">
 			18+ years of engineering leadership, integrating high-stakes API strategies with the cutting edge of AI. Expert in legacy modernization and transforming monolithic complexity into scalable, intelligent growth drivers.
 		</p>
 		<div class="flex flex-col sm:flex-row gap-4 items-center">
-			<a href="/work" class="px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg transition-all shadow-[0_0_20px_rgba(var(--accent-rgb),0.3)] hover:shadow-[0_0_30px_rgba(var(--accent-rgb),0.5)]">
+			<a href="/work" class="btn-primary">
 				Explore Architectural Impact
 			</a>
-			<a href="/resume" class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-semibold rounded-lg transition-all">
+			<a href="/resume" class="btn-secondary">
 				Professional CV
 			</a>
 		</div>
 	</section>
 
 	<!-- Executive Metrics -->
-	<section class="bg-slate-800/50 py-20 border-y border-white/5">
-		<div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+	<section class="bg-secondary/50 py-20 border-y border-white/5 relative">
+		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none"></div>
+		<div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
 			<div class="text-center group">
 				<div class="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-accent transition-colors">18+</div>
 				<div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Years Experience</div>
@@ -63,20 +64,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				</div>
 			</div>
 			<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
-				<div class="space-y-4">
-					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4">Integration Hub</h3>
+				<div class="space-y-4 p-6 glass rounded-2xl group hover:border-accent/30 transition-all">
+					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4 group-hover:pl-6 transition-all">Integration Hub</h3>
 					<p class="text-sm text-slate-500">MuleSoft 3/4, CloudHub 2.0, RTF, Solace, Kafka, API-Led Connectivity.</p>
 				</div>
-				<div class="space-y-4">
-					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4">Agentic AI</h3>
+				<div class="space-y-4 p-6 glass rounded-2xl group hover:border-accent/30 transition-all">
+					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4 group-hover:pl-6 transition-all">Agentic AI</h3>
 					<p class="text-sm text-slate-500">Prompt Engineering, RAG systems, LangChain, agentic workflows for internal automation.</p>
 				</div>
-				<div class="space-y-4">
-					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4">Web & Cloud</h3>
+				<div class="space-y-4 p-6 glass rounded-2xl group hover:border-accent/30 transition-all">
+					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4 group-hover:pl-6 transition-all">Web & Cloud</h3>
 					<p class="text-sm text-slate-500">10+ Java Web Apps, Spring Boot, Microservices, AWS, Azure, GCP.</p>
 				</div>
-				<div class="space-y-4">
-					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4">Process Automation</h3>
+				<div class="space-y-4 p-6 glass rounded-2xl group hover:border-accent/30 transition-all">
+					<h3 class="text-lg font-bold text-white border-l-2 border-accent pl-4 group-hover:pl-6 transition-all">Process Automation</h3>
 					<p class="text-sm text-slate-500">MuleSoft RPA for bot design and UI automation integrated with Anypoint APIs.</p>
 				</div>
 			</div>

@@ -5,28 +5,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="About | Sriman Tirupathy Eshwarappa">
 	<section class="container mx-auto px-6 py-24">
 		<div class="max-w-3xl">
-			<h1 class="text-4xl font-bold text-white mb-8 text-left">The Architectural Manifesto</h1>
-			<p class="text-lg text-slate-400 mb-6 leading-relaxed italic border-l-2 border-accent/40 pl-6">
+			<h1 class="text-4xl font-bold text-white mb-8 text-left">The Architectural <span class="text-gradient">Manifesto</span></h1>
+			<p class="text-lg text-slate-400 mb-6 leading-relaxed italic border-l-2 border-accent/40 pl-6 bg-accent/5 py-4 rounded-r-lg">
 				"Architecture is not about drawing boxes; it is about managing the entropy of a growing business through technical wisdom."
 			</p>
-			<p class="text-lg text-slate-400 mb-6 leading-relaxed">
-				For nearly two decades, I have operated at the intersection of business strategy and engineering excellence. As a Principal Architect, my mission is to ensure that technology is never the bottleneck for innovation. 
-			</p>
-			<p class="text-lg text-slate-400 mb-6 leading-relaxed">
-				Whether delivering the identity layer for India's national ecosystem (**Aadhaar/UIDAI**) or orchestrating global integration hubs with **MuleSoft and Solace**, my focus remains on **Scalability, Security, and Speed**.
-			</p>
-			<p class="text-lg text-slate-400 mb-6 leading-relaxed">
-				My current frontier is the **Agentic Enterprise**. I am pioneering workflows that leverage LLMs not just for code completion, but for high-level architectural reasoning, automated quality engineering, and delivery acceleration.
-			</p>
+			<div class="space-y-6 text-slate-400 leading-relaxed">
+				<p>
+					For nearly two decades, I have operated at the intersection of business strategy and engineering excellence. As a Principal Architect, my mission is to ensure that technology is never the bottleneck for innovation. 
+				</p>
+				<p>
+					Whether delivering the identity layer for India's national ecosystem (**Aadhaar/UIDAI**) or orchestrating global integration hubs with **MuleSoft and Solace**, my focus remains on **Scalability, Security, and Speed**.
+				</p>
+				<p>
+					My current frontier is the **Agentic Enterprise**. I am pioneering workflows that leverage LLMs not just for code completion, but for high-level architectural reasoning, automated quality engineering, and delivery acceleration.
+				</p>
+			</div>
 			
 			<h2 class="text-2xl font-bold text-white mt-12 mb-6">Leadership Principles</h2>
 			<div class="space-y-4">
-				<div class="bg-white/5 p-6 rounded-lg border border-white/10">
-					<h3 class="text-accent font-semibold mb-2">Pragmatic Radicalism</h3>
+				<div class="p-6 glass rounded-2xl border border-white/10 group hover:border-accent/30 transition-all">
+					<h3 class="text-accent font-semibold mb-2 flex items-center gap-2">
+						<span class="w-2 h-2 rounded-full bg-accent"></span>
+						Pragmatic Radicalism
+					</h3>
 					<p class="text-slate-400">Respect the legacy systems that run the business, but ruthlessly modernize any component that hinders agility.</p>
 				</div>
-				<div class="bg-white/5 p-6 rounded-lg border border-white/10">
-					<h3 class="text-accent font-semibold mb-2">The AI-Augmented Lifecycle</h3>
+				<div class="p-6 glass rounded-2xl border border-white/10 group hover:border-accent/30 transition-all">
+					<h3 class="text-accent font-semibold mb-2 flex items-center gap-2">
+						<span class="w-2 h-2 rounded-full bg-accent"></span>
+						The AI-Augmented Lifecycle
+					</h3>
 					<p class="text-slate-400">Moving beyond manual QA toward intelligent, self-healing quality engineering fueled by GenAI and semantic observability.</p>
 				</div>
 			</div>
