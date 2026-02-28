@@ -1,0 +1,44 @@
+﻿
+> sriman-architecture-portfolio@0.0.1 build
+> astro build
+
+[2m21:29:30[22m [34m[content][39m Syncing content
+[2m21:29:30[22m [34m[content][39m Synced content
+[2m21:29:30[22m [34m[types][39m Generated [2m392ms[22m
+[2m21:29:30[22m [34m[build][39m output: [34m"static"[39m
+[2m21:29:30[22m [34m[build][39m mode: [34m"static"[39m
+[2m21:29:30[22m [34m[build][39m directory: [34mC:\Portfolio\Sriman-Architecture-Portfolio\dist\[39m
+[2m21:29:30[22m [34m[build][39m Collecting build info...
+[2m21:29:30[22m [34m[build][39m [32mΓ£ô Completed in 409ms.[39m
+[2m21:29:30[22m [34m[build][39m Building static entrypoints...
+node.exe : [31m[1m21:29:31[22m [ERROR] [vite][39m 
+[31mΓ£ù[39m Build failed in 470ms
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31m[1m21:29:. 
+   ..failed in 470ms:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[31m[CompilerError][39m [astro:build] The closing 
+frontmatter fence (---) is missing an opening fence
+file: C:/Portfolio/Sriman-Architecture-Portfolio/src/pages/abo
+ut.astro:2:1
+  [1mHint:[22m
+[33m    Add --- at the beginning of your file before any 
+import statements or code[39m
+  [1mLocation:[22m
+    [4mC:/Portfolio/Sriman-Architecture-Portfolio/src/pages/a
+bout.astro:2:1[24m
+  [1mStack trace:[22m
+[2m    at handleCompileResultErrors (file:///C:/Portfolio/Sri
+man-Architecture-Portfolio/node_modules/astro/dist/core/compil
+e/compile.js:65:11)
+    at async compileAstro (file:///C:/Portfolio/Sriman-Archite
+cture-Portfolio/node_modules/astro/dist/vite-plugin-astro/comp
+ile.js:13:23)
+    at async transform (file:///C:/Portfolio/Sriman-Architectu
+re-Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:
+21269:16)[22m
