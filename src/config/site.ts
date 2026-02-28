@@ -26,7 +26,7 @@ export const siteConfig = {
   ownership: [
     {
       title: "Platform Engineering",
-      description: "RTF on OpenShift, CloudHub strategy, and hybrid infrastructure management.",
+      description: "Architecting high-availability RTF on OpenShift clusters, CloudHub 2.0 modernization, and elastic hybrid infrastructure.",
       icon: "cpu"
     },
     {
@@ -50,7 +50,7 @@ export const siteConfig = {
     {
       id: "hybrid-mulesoft-platform-rtf-openshift",
       title: "Hybrid MuleSoft Platform: RTF on OpenShift",
-      teaser: "Building a secure, scalable hybrid integration platform with automated CI/CD.",
+      teaser: "Architected a secure, high-scale hybrid integration platform serving 5M+ members with automated GitLab CI/CD.",
       image: "/images/case-study-1.jpg"
     },
     {
@@ -71,6 +71,18 @@ export const siteConfig = {
     { label: "Team Size", value: "15+ Engineers" },
     { label: "Sprint Velocity", value: "+18% Improvement" },
     { label: "Budget Alignment", value: "$10M+ Initiatives" }
+  ],
+  recommendations: [
+    {
+      name: "Henry Lazo",
+      title: "Staff Software Engineer at Living Security | IAM",
+      text: "Sriman was a consultant at Daon and worked with me on a project that required him to learn a number of different technologies. Due to his relentless drive to learn, Sriman was able to quickly pick up Spring MVC and Hibernate, and was able to make a significant contribution to the project. I’m confident that Sriman can work with Spring, Hibernate and any other technologies that are thrown his way."
+    },
+    {
+      name: "Pradeep Ganesha",
+      title: "VP | Product Engineering Leader at Fidelity Investments | Bengaluru | India",
+      text: "Sriman had worked on my team as an associate at Sapient a few years back. Sriman was a person with high level of energy and was a person keen interest to learn new things. He was quick to learn on the job, would roll up his sleves and started effectively contributing within a short span. He was a lively person on the team whom other team members wanted to work with.."
+    }
   ],
 
   keywords: [

@@ -101,12 +101,27 @@ const leadershipImpact = [
                        <div class="text-[10px] uppercase font-bold tracking-widest text-slate-500">{item.label}</div>
                     </div>
                  ))}
-                 <div class="col-span-2 pt-8 mt-8 border-t border-white/5">
-                    <p class="text-slate-400 italic text-sm">"Sriman's ability to align complex technical roadmaps with executive business goals is unmatched in the integration space."</p>
-                    <div class="mt-4 flex items-center gap-3">
-                       <div class="w-8 h-8 rounded-full bg-slate-800"></div>
-                       <div class="text-[10px] uppercase font-bold tracking-widest text-white">Recommended via LinkedIn</div>
-                    </div>
+                 <div class="col-span-2 space-y-12">
+                   {siteConfig.recommendations.map((rec, index) => (
+                     <div class={`pt-8 ${index !== 0 ? 'border-t border-white/5' : ''}`}>
+                       <p class="text-slate-400 italic text-sm mb-4">"{rec.text}"</p>
+                       <div class="flex items-center gap-3">
+                         <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-500">
+                           {rec.name.split(' ').map(n => n[0]).join('')}
+                         </div>
+                         <div>
+                            <div class="text-[10px] uppercase font-bold tracking-widest text-white">{rec.name}</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-tighter">{rec.title}</div>
+                         </div>
+                       </div>
+                     </div>
+                   ))}
+                   <div class="pt-6 border-t border-accent/10">
+                      <div class="inline-flex items-center gap-2 text-accent text-[9px] uppercase font-bold tracking-[0.2em]">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                         Verified via LinkedIn
+                      </div>
+                   </div>
                  </div>
               </div>
            </div>
