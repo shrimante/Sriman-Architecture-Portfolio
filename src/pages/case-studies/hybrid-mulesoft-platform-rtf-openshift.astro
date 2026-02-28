@@ -3,22 +3,22 @@ import CaseStudyTemplate from '../../components/CaseStudyTemplate.astro';
 
 const data = {
   title: "Hybrid MuleSoft Platform: RTF on OpenShift",
-  teaser: "Architected and delivered a secure, high-scale hybrid integration platform serving 5M+ members with OpenShift, F5, and GitLab CI/CD.",
-  context: `The existing infrastructure lacked the scalability and governance required for a growing ecosystem of 120+ microservices. Deployments were manual, and observability was fragmented, leading to unpredictable downtime and slow release cycles.
+  teaser: "Architected and delivered a secure, high-availability hybrid integration platform serving 5M+ members, leveraging MuleSoft Runtime Fabric (RTF) on OpenShift, F5 Big-IP, and enterprise GitLab CI/CD pipelines.",
+  context: `The legacy infrastructure relied on monolithic ESB patterns, which lacked the elastic scalability needed for a rapidly growing ecosystem of 120+ microservices. Manual deployment processes and fragmented observability led to inconsistent MTTR and limited governance.
 
-  The goal was to build a modern, hybrid platform that combined the flexibility of on-prem (OpenShift) with the power of MuleSoft Runtime Fabric (RTF), ensuring 99.9% uptime and 40% faster deployment velocity.`,
-  mandate: `As the Platform Lead, I was responsible for:
-  - Designing the RTF on OpenShift architecture with F5 load balancing.
-  - Implementing GitLab CI/CD pipelines to automate the API lifecycle.
-  - Establishing multi-region DR playbooks and security governance (RBAC/TLS).
-  - Leading a team of 15+ engineers through the migration and rollout.`,
+  The objective was to engineer a modern, hybrid platform combining the cost-efficiency of on-prem OpenShift with the orchestration power of MuleSoft Runtime Fabric (RTF), targeting 99.9% uptime and a significant reduction in deployment friction.`,
+  mandate: `As the Technical Platform Lead, I was responsible for:
+  - Designing the high-availability RTF on OpenShift architecture with F5 Big-IP for intelligent traffic management and TLS termination.
+  - Engineering 100% automated GitLab CI/CD pipelines incorporating quality gates (MUnit), security scanning, and dynamic environment provisioning.
+  - Establishing multi-region DR playbooks and automated secret rotation via AWS Secrets Manager.
+  - Leading a cross-functional team of 15+ engineers through the migration of mission-critical member services.`,
   results: [
-    "99.9% Uptime serving 5M+ members",
-    "40% Increase in deployment speed",
-    "25% Improvement in release cycle efficiency",
-    "Fully automated CI/CD for 100+ APIs"
+    "99.9% Uptime maintained during peak traffic for 5M+ members",
+    "40% Reduction in deployment windows (from days to minutes)",
+    "25% Operational efficiency gain via unified control plane",
+    "Eliminated manual configuration errors through 100% Infrastructure-as-Code"
   ],
-  differently: "In retrospect, I would have invested earlier in automated performance profiling within the CI/CD pipeline. While we hit our reliability targets, optimizing resource allocation on OpenShift became a manual overhead during peak traffic periods which could have been predicted through automated load testing."
+  differently: "In retrospect, I would have invested earlier in automated performance profiling within the CI/CD pipeline. While we hit our reliability targets, optimizing resource allocation on OpenShift became a manual overhead during peak traffic periods which could have been mitigated through automated load testing and predictive scaling."
 };
 ---
 
