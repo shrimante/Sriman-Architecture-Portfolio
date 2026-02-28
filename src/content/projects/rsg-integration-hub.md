@@ -1,0 +1,28 @@
+---
+title: "RSG Core Integration Hub"
+description: "Enterprise-wide hybrid integration platform using MuleSoft CloudHub 2.0 and Solace, delivering 120+ APIs across BFSI and Healthcare."
+publishDate: 2024-12-01
+tags: ["MuleSoft", "Solace", "AWS", "API Governance"]
+featured: true
+metrics:
+  stars: 45
+  forks: 12
+---
+
+### Project Overview
+The RSG Core Integration Hub was designed to modernize legacy integration patterns into a resilient, high-throughput ecosystem. 
+
+### S - Situation
+The client faced extreme fragmentation across 7+ business units with no centralized API governance or observability.
+
+### T - Task
+Architect a unified integration hub that supports both cloud-native and on-premise workloads while enforcing strict security standards.
+
+### A - Action
+- Implemented **MuleSoft Runtime Fabric (RTF)** on AWS EKS.
+- Leveraged **Solace PubSub+** for event-driven architecture.
+- Built custom **Shared Libraries** for standardized error handling and logging.
+
+### R - Result
+- Delivered **120+ production APIs** with 99.99% uptime.
+- Reduced integration development time by **35%** through reusability.
