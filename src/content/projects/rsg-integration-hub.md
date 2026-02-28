@@ -19,10 +19,12 @@ The client faced extreme fragmentation across 7+ business units with no centrali
 Architect a unified integration hub that supports both cloud-native and on-premise workloads while enforcing strict security standards.
 
 ### A - Action
-- Implemented **MuleSoft Runtime Fabric (RTF)** on AWS EKS.
-- Leveraged **Solace PubSub+** for event-driven architecture.
+- Implemented **MuleSoft CloudHub 2.0 and Runtime Fabric (RTF)** on AWS.
+- Leveraged **Solace PubSub+** for high-performance event-driven architecture.
 - Built custom **Shared Libraries** for standardized error handling and logging.
+- Established comprehensive observability using **Anypoint Monitoring, Splunk, and ELK Stack**.
 
 ### R - Result
 - Delivered **120+ production APIs** with 99.99% uptime.
-- Reduced integration development time by **35%** through reusability.
+- Reduced integration development time by **35%** through reusable patterns and RFP-aligned solutioning.
+- Successfully migrated legacy TIBCO and IBM ESB platforms to the unified MuleSoft ecosystem.
