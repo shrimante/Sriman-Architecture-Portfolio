@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <div class="container mx-auto px-6 py-24">
+    <div class="mb-12">
+      <a href="/#case-studies" class="text-accent hover:text-white transition-colors text-sm uppercase tracking-widest font-bold mb-8 inline-block">&larr; Back to Portfolio</a>
+      <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tighter">Hybrid RTF Architecture</h1>
+      <p class="text-slate-400 max-w-2xl text-lg">
+        A generic hybrid architecture topology routing external traffic through an F5 Big-IP Load Balancer to either CloudHub 2.0 or an on-premise OpenShift cluster running MuleSoft Runtime Fabric.
+      </p>
+    </div>
+
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 overflow-x-auto diagram-container">
+      <div class="mermaid min-w-[800px] flex justify-center">
+        graph TD
+          Client[External Clients / Mobile / Web] --> F5[F5 Big-IP Load Balancer]
+          
+          subgraph ControlPlane[MuleSoft Anypoint Platform]
+              API_Manager[API Manager]
+              Runtime_Manager[Runtime Manager]
+          end
+
+          subgraph AWS[AWS Region - CloudHub 2.0]
+              CH2_Ingress[CloudHub 2.0 Ingress]
+              Exp_API[Experience APIs]
+              Sys_API_CH[External System APIs]
+              CH2_Ingress --> Exp_API
+              Exp_API --> Sys_API_CH
+          end
+
+          subgraph OnPrem[On-Premise Data Center]
+              OpenShift[Red Hat OpenShift Cluster]
+              subgraph RTF[Runtime Fabric]
+                  RTF_Ingress[RTF Ingress Controller]
+                  Process_API[Process / Orchestration APIs]
+                  Sys_API_OP[Internal System APIs]
+                  RTF_Ingress --> Process_API
+                  Process_API --> Sys_API_OP
+              end
+              Backends[(Legacy DB / ERP / Mainframe)]
+              Sys_API_OP --> Backends
+          end
+
+          F5 -->|External Traffic| CH2_Ingress
+          F5 -->|Internal/Secure Traffic| RTF_Ingress
+          
+          Sys_API_CH -.->|VPN/Direct Connect| RTF_Ingress
+          
+          ControlPlane -.->|Management| Exp_API
+          ControlPlane -.->|Management| Process_API
+          ControlPlane -.->|Management| Sys_API_CH
+          ControlPlane -.->|Management| Sys_API_OP
+
+          classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:#fff;
+          classDef onprem fill:#005276,stroke:#00A1E0,stroke-width:2px,color:#fff;
+          classDef control fill:#00A1E0,stroke:#005276,stroke-width:2px,color:#fff;
+          classDef lb fill:#1C9E5E,stroke:#0F5B36,stroke-width:2px,color:#fff;
+          
+          class AWS aws;
+          class OnPrem onprem;
+          class ControlPlane control;
+          class F5 lb;
+      </div>
+    </div>
+  </div>
+
+  <script is:inline type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ 
+      startOnLoad: true, 
+      theme: 'dark',
+      fontFamily: 'system-ui, sans-serif'
+    });
+  </script>
+</BaseLayout>
