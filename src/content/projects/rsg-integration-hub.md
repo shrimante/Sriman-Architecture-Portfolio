@@ -1,30 +1,27 @@
 ---
-title: "Cognitive Quality Modernization"
-description: "Pioneering the 'Agentic QA' frontier by integrating LLMs and RAG into the core engineering lifecycle to slash delivery overhead by 25%."
+title: "RSG Global Integration Hub"
+description: "Orchestrating a unified, cloud-native integration strategy for 120+ mission-critical APIs across BFSI and Healthcare sectors."
 publishDate: 2024-12-01
 tags: ["MuleSoft", "Solace", "AWS", "API Governance"]
 featured: true
-metrics:
-  stars: 45
-  forks: 12
 ---
 
 ### Project Overview
-The RSG Core Integration Hub was designed to modernize legacy integration patterns into a resilient, high-throughput ecosystem. 
+As the Principal Architect, I spearheaded the transition from fragmented legacy integrations to a high-throughput, unified ecosystem enabling cross-functional agility for 7+ business units.
 
 ### S - Situation
-The client faced extreme fragmentation across 7+ business units with no centralized API governance or observability.
+The enterprise faced extreme architectural fragmentation, hindering business speed and leaving the organization without centralized governance or observability.
 
 ### T - Task
-Architect a unified integration hub that supports both cloud-native and on-premise workloads while enforcing strict security standards.
+Design and implement a resilient, national-scale integration hub supporting cloud-native and on-premise workloads while enforcing rigid security and performance standards.
 
 ### A - Action
-- Implemented **MuleSoft CloudHub 2.0 and Runtime Fabric (RTF)** on AWS.
-- Leveraged **Solace PubSub+** for high-performance event-driven architecture.
-- Built custom **Shared Libraries** for standardized error handling and logging.
-- Established comprehensive observability using **Anypoint Monitoring, Splunk, and ELK Stack**.
+- Engineered the core platform using **MuleSoft CloudHub 2.0 and Runtime Fabric (RTF)**.
+- Established **Solace PubSub+** as the event backbone for high-performance, asynchronous workflows.
+- Developed a suite of **Shared Architectural Libraries** to standardize security, logging, and error handling.
+- Implemented global observability via **Anypoint Monitoring, Splunk, and ELK**.
 
 ### R - Result
-- Delivered **120+ production APIs** with 99.99% uptime.
-- Reduced integration development time by **35%** through reusable patterns and RFP-aligned solutioning.
-- Successfully migrated legacy TIBCO and IBM ESB platforms to the unified MuleSoft ecosystem.
+- Delivered **120+ production APIs** with 99.99% operational uptime.
+- Accelerated development velocity by **35%** through reusable patterns.
+- Successfully decommissioned high-cost legacy TIBCO and IBM ESB environments.
