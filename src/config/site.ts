@@ -68,7 +68,7 @@ export const siteConfig = {
   ],
 
   leadership: [
-    { label: "Team Size", value: "15+ Engineers" },
+    { label: "Peak Team Size", value: "30+ Engineers" },
     { label: "Sprint Velocity", value: "+18% Improvement" },
     { label: "Budget Alignment", value: "$10M+ Initiatives" }
   ],
