@@ -26,9 +26,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             Broker2((Broker Node 2))
             Broker3((Broker Node 3))
             
-            Broker1 <--> Broker2
-            Broker2 <--> Broker3
-            Broker3 <--> Broker1
+            Broker1 --- Broker2
+            Broker2 --- Broker3
+            Broker3 --- Broker1
             
             Topic1[[orders/created]]
             Topic2[[billing/invoice/generated]]
