@@ -15,7 +15,7 @@ export const siteConfig = {
   },
   
   metrics: [
-    { label: "Years Experience", value: "18+" },
+    { label: "Years Experience", value: "~20" },
     { label: "Production APIs", value: "120+" },
     { label: "Major Programs", value: "7+" },
     { label: "Deployment Speed", value: "40% Faster" },
