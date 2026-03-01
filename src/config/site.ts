@@ -86,8 +86,10 @@ export const siteConfig = {
   ],
 
   keywords: [
-    "MuleSoft Anypoint", "Runtime Fabric", "CloudHub", "API Manager", "RAML", 
+    "Enterprise Architecture", "API Strategy & Governance", "Platform Engineering", 
+    "Integration Operating Model (C4E)", "Capacity Planning", "Reliability Engineering",
+    "MuleSoft Anypoint", "Runtime Fabric", "CloudHub 2.0", "API Manager", "RAML", 
     "OAuth2", "TLS", "RBAC", "Solace", "Splunk", "ELK", "OpenShift", 
-    "Kubernetes", "DR", "GitLab CI/CD"
+    "Kubernetes", "Disaster Recovery", "GitLab CI/CD"
   ]
 };

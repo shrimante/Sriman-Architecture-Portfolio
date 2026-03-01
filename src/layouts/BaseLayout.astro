@@ -93,7 +93,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://sriman.a
 						<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400 mb-6">Expertise Taxonomy</h4>
 						<div class="flex flex-wrap gap-x-6 gap-y-3">
 							{siteConfig.keywords.map(kw => (
-								<span class="text-xs text-slate-500 hover:text-slate-800 transition-colors cursor-default">{kw}</span>
+								<span class="text-sm font-semibold text-slate-700 hover:text-accent transition-colors cursor-default">{kw}</span>
 							))}
 						</div>
 					</div>
