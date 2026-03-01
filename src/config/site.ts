@@ -10,7 +10,7 @@ export const siteConfig = {
   timezone: "IST",
   headshot: { 
     enabled: true, 
-    src: "/images/IMG_20180110_165147.jpg", 
+    src: "/images/headshot-bust.jpg", 
     alt: "Sriman Tirupathy Eshwarappa" 
   },
   
