@@ -136,10 +136,21 @@ const leadershipImpact = [
      <div class="container mx-auto px-6 text-center">
         <h2 class="text-2xl font-bold mb-12 uppercase tracking-[0.2em] text-slate-500">Certifications & Expertise</h2>
         <div class="flex flex-wrap justify-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-           {['mulesoft-certified-architect', 'openshift-architect', 'aws-solution-architect', 'pmp-leadership'].map(cert => (
-              <div class="flex flex-col items-center gap-3">
-                 <div class="w-16 h-16 bg-white/10 rounded-xl"></div>
-                 <div class="text-[10px] uppercase font-bold tracking-widest">{cert.replace(/-/g, ' ')}</div>
+          {
+             [
+               { name: 'MuleSoft Certified Integration Architect', year: '2019' },
+               { name: 'MuleSoft Certified Platform Architect', year: '2019' },
+               { name: 'MuleSoft Certified Developer', year: '2019' },
+               { name: 'AWS Machine Learning Specialty', year: 'In Progress' }
+             ].map(cert => (
+              <div class="flex flex-col items-center gap-2 group">
+                 <div class="w-16 h-16 bg-slate-100 border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 group-hover:border-accent/40 group-hover:text-accent transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                 </div>
+                 <div class="text-center">
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-slate-700">{cert.name}</div>
+                    <div class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold">{cert.year}</div>
+                 </div>
               </div>
            ))}
         </div>
