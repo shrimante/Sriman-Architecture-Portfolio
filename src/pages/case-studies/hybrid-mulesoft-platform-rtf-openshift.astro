@@ -80,17 +80,18 @@ const diagram = `graph TD
         </section>
 
         <!-- Markdown-style content sections using Tailwind Prose -->
-        <div class="bg-white p-10 md:p-16 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="px-4 md:px-8">
           <div class="prose prose-slate max-w-none 
-                      prose-headings:font-bold prose-headings:tracking-tight 
-                      prose-h2:text-3xl prose-h2:text-slate-900 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-6 prose-h2:mb-8 prose-h2:mt-16 
-                      prose-h3:text-xl prose-h3:text-accent prose-h3:mt-10 prose-h3:mb-4
-                      prose-p:text-slate-600 prose-p:leading-relaxed 
-                      prose-li:text-slate-600 prose-li:marker:text-accent/60
+                      prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-slate-900
+                      prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-12 prose-h2:border-none prose-h2:pb-0
+                      prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-h3:font-semibold
+                      prose-p:text-slate-800 prose-p:leading-relaxed prose-p:mb-5
+                      prose-ul:mt-2 prose-ul:mb-6 prose-ul:list-disc prose-ul:pl-5
+                      prose-li:text-slate-800 prose-li:my-1.5 prose-li:marker:text-slate-800
                       prose-strong:text-slate-900 prose-strong:font-semibold">
             
             <h2 class="!mt-0">1) Architectural Principles</h2>
-            <ul class="space-y-4">
+            <ul>
               <li><strong>Hybrid by design (runtime placement):</strong> Workloads are placed on CloudHub 2.0 or on-prem RTF based on connectivity, compliance, latency, and operational constraints—without compromising consistency in governance, security, and observability.</li>
               <li><strong>Centralized traffic control:</strong> All inbound routing is governed through an enterprise ingress layer (F5) to enforce consistent patterns for exposure, TLS posture, and traffic steering across runtime planes.</li>
               <li><strong>Environment parity:</strong> Non-production mirrors production topology, including routing paths and runtime splits, to prevent production-only failures arising from untested hybrid behavior.</li>
