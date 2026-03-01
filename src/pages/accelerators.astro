@@ -1,37 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
 
-// Placeholder data for the accelerators
-const accelerators = [
-  {
-    title: "MuleSoft API-Led Templating Engine",
-    description: "A Python CLI utility that parses OAS 3.0 swagger files to auto-generate baseline Mule 4 System, Process, and Experience API scaffolds, enforcing standardized logging frameworks immediately.",
-    tags: ["Python", "Mule 4", "Automation", "Scaffolding"],
-    githubUrl: "#",
-    status: "Active"
-  },
-  {
-    title: "Global Custom Policies Pack",
-    description: "A repository of pre-built, production-hardened custom API Manager policies including advanced JWT validation with distributed caching and custom rate-limiting algorithms.",
-    tags: ["Rust", "API Manager", "Security", "Policies"],
-    githubUrl: "#",
-    status: "Active"
-  },
-  {
-    title: "CI/CD Pipeline Blueprint for RTF",
-    description: "Standardized GitHub Actions workflows and Jenkinsfile templates for zero-downtime deployments to MuleSoft Runtime Fabric on OpenShift, including automated MUnit test gates.",
-    tags: ["YAML", "GitHub Actions", "Jenkins", "RTF"],
-    githubUrl: "#",
-    status: "Active"
-  },
-  {
-    title: "Splunk Observability Dashboards as Code",
-    description: "Terraform configurations and JSON definitions to instantly provision comprehensive Splunk dashboards monitoring MuleSoft application health, vCore usage, and API traffic metrics.",
-    tags: ["Terraform", "Splunk", "Monitoring", "IaC"],
-    githubUrl: "#",
-    status: "Coming Soon"
-  }
-];
+const accelerators = siteConfig.accelerators.map(a => ({
+  ...a,
+  githubUrl: `https://github.com/shrimante/${a.repo}`,
+  status: "Active" // Setting to active as per request to list them
+}));
 ---
 
 <BaseLayout title="Engineering Accelerators | Sriman Tirupathy Eshwarappa">
@@ -84,9 +59,14 @@ const accelerators = [
             
             <h3 class="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-accent transition-colors">{accelerator.title}</h3>
             
-            <p class="text-slate-600 leading-relaxed mb-8 flex-grow">
+            <p class="text-slate-600 leading-relaxed mb-6">
               {accelerator.description}
             </p>
+
+            <div class="mb-8 p-4 bg-accent/5 rounded-xl border border-accent/10">
+              <div class="text-[9px] uppercase font-extrabold tracking-widest text-accent mb-2">Why This Matters</div>
+              <p class="text-slate-700 text-sm leading-snug italic">"{accelerator.impact}"</p>
+            </div>
             
             <div class="mt-auto">
               <div class="flex flex-wrap gap-2 mb-8">

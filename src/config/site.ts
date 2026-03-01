@@ -91,5 +91,134 @@ export const siteConfig = {
     "MuleSoft Anypoint", "Runtime Fabric", "CloudHub 2.0", "API Manager", "RAML", 
     "OAuth2", "TLS", "RBAC", "Solace", "Splunk", "ELK", "OpenShift", 
     "Kubernetes", "Disaster Recovery", "GitLab CI/CD"
+  ],
+
+  accelerators: [
+    {
+      title: "API Program Starter Kit",
+      repo: "mulesoft-api-program-starter",
+      description: "Reference folder structure, naming conventions, branching strategy, baseline Maven structure, env config patterns, error handling conventions, sample flows, and unit test skeletons.",
+      impact: "Standardizes delivery across all squads from day one.",
+      tags: ["Mule 4", "Maven", "Best Practices"]
+    },
+    {
+      title: "API Spec Governance Pack",
+      repo: "api-spec-governance-pack",
+      description: "RAML/OAS linting rules, style guides, 'gold standard' examples, reusable traits, and automated mocking guidance.",
+      impact: "Ensures high-quality, consistent API contracts enterprise-wide.",
+      tags: ["RAML", "OAS", "Governance"]
+    },
+    {
+      title: "Exchange Asset Templates",
+      repo: "exchange-asset-templates",
+      description: "API-led project templates (EAPI/PAPI/SAPI), standard error models, pagination patterns, and idempotency modules.",
+      impact: "Accelerates developer onboarding and enforces architectural patterns.",
+      tags: ["API-Led", "Reusable Assets", "Onboarding"]
+    },
+    {
+      title: "CI/CD Pipeline Templates",
+      repo: "mulesoft-cicd-templates",
+      description: "GitHub Actions and Jenkins pipelines for CloudHub 2.0 & RTF. Includes MUnit gates, environment promotion, and rollback strategies.",
+      impact: "Automates the release lifecycle with 100% predictable deployments.",
+      tags: ["GitHub Actions", "Jenkins", "DevOps"]
+    },
+    {
+      title: "MUnit Test Accelerator",
+      repo: "munit-accelerator",
+      description: "Test templates, mocking patterns for common connectors (Salesforce, SAP, DB), and automated coverage gate configurations.",
+      impact: "Ensures engineering excellence through robust automated testing.",
+      tags: ["MUnit", "Quality Gates", "Testing"]
+    },
+    {
+      title: "Error Handling Standard",
+      repo: "mulesoft-error-handling-standard",
+      description: "Canonical error taxonomy, global error handler implementation, correlation ID strategy, and REST-aligned response models.",
+      impact: "Reduces MTTR and provides a consistent experience for API consumers.",
+      tags: ["Error Handling", "REST", "Reliability"]
+    },
+    {
+      title: "Logging & Correlation Standard",
+      repo: "mulesoft-logging-standard",
+      description: "JSON structured logging, correlation propagation across service tiers, and out-of-the-box Splunk/ELK/Datadog compatibility.",
+      impact: "Provides enterprise-grade observability and simplifies troubleshooting.",
+      tags: ["Observability", "Splunk", "ELK"]
+    },
+    {
+      title: "Security Baseline Accelerator",
+      repo: "mulesoft-security-baseline",
+      description: "Implementation patterns for OAuth2, mTLS, JWT enforcement, secret management, and PII masking.",
+      impact: "Hardens the platform security posture by default.",
+      tags: ["Security", "OAuth2", "mTLS"]
+    },
+    {
+      title: "Policy-as-Code Automation",
+      repo: "apim-policy-automation",
+      description: "Scripts to automate API Manager setup, policy application (Rate Limiting, Client ID enforcement), and SLA tier promotion.",
+      impact: "Eliminates manual configuration errors at scale.",
+      tags: ["Automation", "API Manager", "Policy-as-Code"]
+    },
+    {
+      title: "Secret Management Integration",
+      repo: "secret-manager-integration",
+      description: "Reference implementations for AWS Secrets Manager and Azure Key Vault integration with MuleSoft properties.",
+      impact: "Enables secure, externalized credential management for modern cloud envs.",
+      tags: ["AWS", "Azure", "Secrets Manager"]
+    },
+    {
+      title: "Reusable Integration Modules",
+      repo: "integration-modules-library",
+      description: "Common library for Salesforce composite wrappers, SFTP ingestion modules, and circuit breaker patterns.",
+      impact: "Promotes code reuse and reduces 'point-to-point' anti-patterns.",
+      tags: ["Modules", "Reuse", "Efficiency"]
+    },
+    {
+      title: "Canonical Data Model Kit",
+      repo: "canonical-model-mapping-kit",
+      description: "JSON schemas and DataWeave mapping patterns for core enterprise domains (Customer, Order, Product).",
+      impact: "Proves enterprise integration thinking through data consistency.",
+      tags: ["Data Modeling", "DataWeave", "JSON Schema"]
+    },
+    {
+      title: "DataWeave Utilities Pack",
+      repo: "dataweave-utils-pack",
+      description: "Collection of DWL functions for null-safe operations, date normalization, masking, and complex transformations.",
+      impact: "Significant daily productivity boost for integration developers.",
+      tags: ["DataWeave", "Utility", "Productivity"]
+    },
+    {
+      title: "Performance & Resilience Patterns",
+      repo: "mulesoft-resilience-patterns",
+      description: "Implementation guides for Bulkheads, Circuit Breakers, Retries with Backoff, and Application Tuning checklists.",
+      impact: "Ensures production-grade resilience for high-concurrency APIs.",
+      tags: ["Resilience", "Performance", "SRE"]
+    },
+    {
+      title: "Operational Runbooks",
+      repo: "mulesoft-ops-runbooks",
+      description: "SRE-style playbooks for incident response, common failure modes, DR checklists, and health check definitions.",
+      impact: "Provides a leadership-level safety net for platform operations.",
+      tags: ["SRE", "Operations", "Runbooks"]
+    },
+    {
+      title: "ADR & NFR Architecture Kit",
+      repo: "integration-architecture-adr-kit",
+      description: "Templates for Architecture Decision Records (ADR), Non-Functional Requirement (NFR) checklists, and decision trees.",
+      impact: "Formalizes architectural decision-making and ensures project alignment.",
+      tags: ["Architecture", "Governance", "ADR"]
+    },
+    {
+      title: "API Documentation Portal",
+      repo: "api-docs-portal-starter",
+      description: "Static documentation site template (Docusaurus) integrated with Anypoint Exchange for consumer-facing docs.",
+      impact: "Improves API adoption and developer experience (DX).",
+      tags: ["Documentation", "DX", "Portal"]
+    },
+    {
+      title: "Lifecycle & Release Governance",
+      repo: "integration-lifecycle-governance",
+      description: "Checklists for Definition of Ready/Done, versioning strategies, and deprecation lifecycle policies.",
+      impact: "Provides executive-level control over the entire API lifecycle.",
+      tags: ["Governance", "Lifecycle", "Leadership"]
+    }
   ]
 };
