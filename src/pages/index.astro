@@ -138,18 +138,38 @@ const leadershipImpact = [
         <div class="flex flex-wrap justify-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
           {
              [
-               { name: 'MuleSoft Certified Integration Architect', year: '2019' },
-               { name: 'MuleSoft Certified Platform Architect', year: '2019' },
-               { name: 'MuleSoft Certified Developer', year: '2019' },
-               { name: 'AWS Machine Learning Specialty', year: 'In Progress' }
+               { 
+                 name: 'MuleSoft Certified Integration Architect', 
+                 year: '2019',
+                 color: 'text-sky-600',
+                 svg: '<path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path><circle cx="12" cy="12" r="3"></circle>'
+               },
+               { 
+                 name: 'MuleSoft Certified Platform Architect', 
+                 year: '2019',
+                 color: 'text-sky-600',
+                 svg: '<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline>'
+               },
+               { 
+                 name: 'MuleSoft Certified Developer', 
+                 year: '2019',
+                 color: 'text-sky-600',
+                 svg: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>'
+               },
+               { 
+                 name: 'AWS Machine Learning Specialty', 
+                 year: 'In Progress',
+                 color: 'text-orange-500',
+                 svg: '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>'
+               }
              ].map(cert => (
-              <div class="flex flex-col items-center gap-2 group">
-                 <div class="w-16 h-16 bg-slate-100 border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 group-hover:border-accent/40 group-hover:text-accent transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+              <div class="flex flex-col items-center gap-4 group">
+                 <div class="w-20 h-20 bg-white border-2 border-slate-200 rounded-2xl flex items-center justify-center text-slate-400 group-hover:border-accent group-hover:shadow-lg transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" class={`group-hover:${cert.color} transition-colors duration-300`} stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={cert.svg}></svg>
                  </div>
-                 <div class="text-center">
-                    <div class="text-[10px] uppercase font-bold tracking-widest text-slate-700">{cert.name}</div>
-                    <div class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold">{cert.year}</div>
+                 <div class="text-center max-w-[180px]">
+                    <div class="text-[11px] uppercase font-extrabold tracking-widest text-slate-900 group-hover:text-accent transition-colors mb-1 leading-tight">{cert.name}</div>
+                    <div class="text-[9px] uppercase tracking-[0.2em] text-slate-500 font-bold">{cert.year}</div>
                  </div>
               </div>
            ))}
