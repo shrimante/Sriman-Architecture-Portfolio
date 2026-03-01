@@ -100,11 +100,11 @@ const leadershipImpact = [
         <div class="glass p-1 rounded-[40px] overflow-hidden">
            <div class="bg-white p-12 rounded-[38px] relative">
               <!-- Leadership Metric Card -->
-              <div class="grid grid-cols-2 gap-8">
+              <div class="grid grid-cols-2 gap-x-6 gap-y-10 items-stretch">
                  {siteConfig.leadership.map(item => (
-                    <div>
-                       <div class="text-3xl font-bold text-slate-900 mb-2">{item.value}</div>
-                       <div class="text-[10px] uppercase font-bold tracking-widest text-slate-500">{item.label}</div>
+                    <div class="flex flex-col h-full">
+                       <div class="text-3xl font-extrabold text-slate-900 mb-3 leading-tight tracking-tighter pr-2">{item.value}</div>
+                       <div class="text-[10px] uppercase font-bold tracking-[0.15em] text-slate-400 mt-auto">{item.label}</div>
                     </div>
                  ))}
                  <div class="col-span-2 space-y-12">
