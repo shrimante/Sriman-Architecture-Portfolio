@@ -10,7 +10,7 @@ export const siteConfig = {
   timezone: "IST",
   headshot: { 
     enabled: true, 
-    src: "/images/IMG_20180110_165147.avif", 
+    src: "/images/IMG_20180110_165147.jpg", 
     alt: "Sriman Tirupathy Eshwarappa" 
   },
   
@@ -51,19 +51,19 @@ export const siteConfig = {
       id: "hybrid-mulesoft-platform-rtf-openshift",
       title: "Hybrid MuleSoft Platform: RTF on OpenShift",
       teaser: "Architected a secure, high-scale hybrid integration platform serving 5M+ members with automated GitLab CI/CD.",
-      image: "/images/case-study-1.jpg"
+      image: "/images/case-study-1.png"
     },
     {
       id: "enterprise-api-strategy-governance",
       title: "Enterprise API Strategy & Governance",
       teaser: "Scaling 120+ APIs with standardized security, lifecycle, and documentation.",
-      image: "/images/case-study-2.jpg"
+      image: "/images/case-study-2.png"
     },
     {
       id: "esb-to-mulesoft-migration",
       title: "Legacy ESB to MuleSoft Migration",
       teaser: "Modernizing from Informatica to Anypoint, saving 3 weeks per cycle.",
-      image: "/images/case-study-3.jpg"
+      image: "/images/case-study-3.png"
     }
   ],
 
