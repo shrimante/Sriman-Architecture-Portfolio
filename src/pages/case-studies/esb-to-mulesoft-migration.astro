@@ -1,25 +1,151 @@
 ---
-import CaseStudyTemplate from '../../components/CaseStudyTemplate.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { siteConfig } from '../../config/site';
 
-const data = {
-  title: "Legacy ESB to MuleSoft Migration",
-  teaser: "Modernized a critical legacy integration layer from Informatica ESB to Anypoint Platform, reducing cycle times by 3 weeks and saving $250K annually.",
-  context: `The existing Informatica ESB infrastructure was reaching end-of-life and had become a bottleneck for business innovation. Cycle times were measured in months, and maintenance costs were skyrocketing.
-
-  The objective was to migrate the mission-critical integrations to MuleSoft while ensuring zero downtime for the existing production systems.`,
-  mandate: `Key responsibilities included:
-  - Mapping legacy Informatica patterns to modern Mule 4 architectures.
-  - Developing a migration factory model to accelerate payload transformations.
-  - Implementing event-driven patterns using Solace for real-time sync.
-  - Validating all migrations through automated test suites and DR drills.`,
-  results: [
-    "$250,000 Annual savings in licensing and compute",
-    "3 Weeks saved per release cycle",
-    "Reduced technical debt by 60%",
-    "Zero production downtime during migration"
-  ],
-  differently: "If I could do it again, I would have pushed for a 'big bang' migration on the low-complexity services rather than a purely phased approach. We spent a lot of time managing the 'dual-run' sync between Informatica and MuleSoft for simple integrations that could have been ported and switched in a single weekend with minimal risk."
-};
+const title = "Legacy ESB to MuleSoft Migration";
+const teaser = "Modernized a critical legacy integration layer from Informatica ESB to Anypoint Platform, reducing cycle times by 3 weeks and saving $250K annually.";
 ---
 
-<CaseStudyTemplate {...data} />
+<BaseLayout title={`${title} | Sriman Tirupathy Eshwarappa`}>
+  <article class="pt-32 pb-24">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <a href="/#case-studies" class="inline-flex items-center gap-2 text-accent text-[10px] uppercase font-bold tracking-widest mb-12 hover:translate-x-[-4px] transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Case Studies
+      </a>
+
+      <header class="mb-20">
+        <div class="text-[10px] uppercase tracking-[0.2em] font-bold text-accent mb-6">Case Study</div>
+        <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight tracking-tighter">{title}</h1>
+        <p class="text-xl text-slate-600 leading-relaxed font-outfit">{teaser}</p>
+      </header>
+
+      <div class="space-y-20">
+        <!-- Styled Content Sections -->
+        <div class="max-w-[900px] mx-auto pb-32">
+          <div class="flex flex-col gap-16">
+            
+            <!-- Section 1 -->
+            <section>
+              <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">1</div>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tighter">Context & Objective</h2>
+              </div>
+              <div class="glass p-8 md:p-10">
+                <p class="text-slate-600 leading-relaxed text-lg mb-6">
+                  The existing Informatica ESB infrastructure was reaching end-of-life and had become a bottleneck for business innovation. Cycle times were measured in months, and maintenance costs were skyrocketing.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-lg font-semibold text-slate-900">
+                  The objective was to migrate the mission-critical integrations to MuleSoft while ensuring zero downtime for the existing production systems.
+                </p>
+              </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section>
+              <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">2</div>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tighter">The Mandate</h2>
+              </div>
+
+              <div class="border-l-2 border-accent/20 pl-6 mb-10">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Key Responsibilities</h3>
+                <ul class="space-y-4">
+                  <li class="flex gap-3">
+                    <div class="mt-1.5 text-slate-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+                    <div class="text-slate-600 text-lg">Mapping legacy Informatica patterns to modern Mule 4 architectures.</div>
+                  </li>
+                  <li class="flex gap-3">
+                    <div class="mt-1.5 text-slate-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+                    <div class="text-slate-600 text-lg">Developing a migration factory model to accelerate payload transformations.</div>
+                  </li>
+                  <li class="flex gap-3">
+                    <div class="mt-1.5 text-slate-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+                    <div class="text-slate-600 text-lg">Implementing event-driven patterns using Solace for real-time sync.</div>
+                  </li>
+                  <li class="flex gap-3">
+                    <div class="mt-1.5 text-slate-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+                    <div class="text-slate-600 text-lg">Validating all migrations through automated test suites and DR drills.</div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section>
+              <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">3</div>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tighter">Measured Results</h2>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass p-6 border-l-4 border-l-accent flex items-start gap-4">
+                  <div class="mt-1 text-accent flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 font-bold mb-1 text-xl">$250,000</div>
+                    <div class="text-slate-600 text-sm">Annual savings in licensing and compute</div>
+                  </div>
+                </div>
+                
+                <div class="glass p-6 border-l-4 border-l-accent flex items-start gap-4">
+                  <div class="mt-1 text-accent flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 font-bold mb-1 text-xl">3 Weeks</div>
+                    <div class="text-slate-600 text-sm">Saved per release cycle</div>
+                  </div>
+                </div>
+                
+                <div class="glass p-6 border-l-4 border-l-accent flex items-start gap-4">
+                  <div class="mt-1 text-accent flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 font-bold mb-1 text-xl">60% Reduction</div>
+                    <div class="text-slate-600 text-sm">In overall technical debt</div>
+                  </div>
+                </div>
+                
+                <div class="glass p-6 border-l-4 border-l-accent flex items-start gap-4">
+                  <div class="mt-1 text-accent flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="text-slate-900 font-bold mb-1 text-xl">Zero Downtime</div>
+                    <div class="text-slate-600 text-sm">During production systems migration</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section>
+              <div class="flex items-center gap-4 mb-8 mt-4">
+                <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">4</div>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tighter">Retrospective</h2>
+              </div>
+              
+              <div class="glass p-8 md:p-10 bg-slate-900 text-white shadow-xl isolate relative overflow-hidden">
+                <div class="absolute inset-0 bg-accent/10 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.2),transparent_50%)]"></div>
+                <div class="relative z-10">
+                  <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                    If I could do it differently
+                  </h3>
+                  <p class="text-slate-300 leading-relaxed text-lg italic">
+                    "If I could do it again, I would have pushed for a 'big bang' migration on the low-complexity services rather than a purely phased approach. We spent a lot of time managing the 'dual-run' sync between Informatica and MuleSoft for simple integrations that could have been ported and switched in a single weekend with minimal risk."
+                  </p>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>
